@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>💐 Chúc mừng Ngày Phụ Nữ Việt Nam 20/10 💖</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at top left, #ffcad4, #ff8fab, #ff5d8f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-align: center;
+  }
+
+  /* Khung thiệp */
+  .card {
+    position: relative;
+    width: 85%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 40px 30px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255,255,255,0.2);
+    animation: fadeIn 2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    background: linear-gradient(90deg, #fff, #ffe6f0, #ffb3c6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    animation: glow 3s ease-in-out infinite;
+  }
+
+  @keyframes glow {
+    0%, 100% { text-shadow: 0 0 20px rgba(255,255,255,0.6); }
+    50% { text-shadow: 0 0 40px rgba(255,255,255,0.9); }
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    color: #ffe6f0;
+    letter-spacing: 2px;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #fff9fb;
+    margin-bottom: 25px;
+  }
+
+  /* Nút */
+  .btn {
+    background: linear-gradient(90deg, #ffb3c6, #ff80ab, #ff4081);
+    border: none;
+    padding: 14px 30px;
+    color: white;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(255, 100, 150, 0.5);
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(255, 80, 130, 0.6);
+  }
+
+  /* Hoa rơi */
+  .flower {
+    position: absolute;
+    top: -10px;
+    color: #fff0f5;
+    font-size: 25px;
+    animation: fall linear infinite;
+    opacity: 0.8;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
+  }
+
+  @keyframes fall {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+  }
+
+  /* Trái tim bay */
+  .heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 22px;
+    color: #ffb3c6;
+    animation: fly 5s linear forwards;
+  }
+
+  @keyframes fly {
+    0% { transform: translateY(0) scale(0.8); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(1.6); opacity: 0; }
+  }
+
+  /* Hiệu ứng ánh sáng */
+  .shine {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background: linear-gradient(120deg, rgba(255,255,255,0.3), transparent, rgba(255,255,255,0.1));
+    animation: shineMove 4s linear infinite;
+  }
+
+  @keyframes shineMove {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="shine"></div>
+  <h1>💖 CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM 💖</h1>
+  <h2>🌷 20 - 10 - 2025 🌷</h2>
+  <p>
+    Xin gửi lời chúc tốt đẹp nhất đến tất cả những người phụ nữ Việt Nam:  
+    <strong>xinh đẹp – tự tin – bản lĩnh – tỏa sáng!</strong>  
+    Cảm ơn vì luôn là nguồn cảm hứng và yêu thương trong cuộc sống này 💕
+  </p>
+  <button class="btn" onclick="showLove()">💐 Gửi yêu thương 💐</button>
+</div>
+
+<script>
+  // Tạo hoa rơi
+  function createFlower() {
+    const flower = document.createElement("div");
+    flower.classList.add("flower");
+    flower.textContent = ["🌸","🌷","💮","🌺","🌻"][Math.floor(Math.random()*5)];
+    flower.style.left = Math.random() * 100 + "vw";
+    flower.style.animationDuration = 5 + Math.random() * 5 + "s";
+    document.body.appendChild(flower);
+    setTimeout(() => flower.remove(), 10000);
+  }
+  setInterval(createFlower, 300);
+
+  // Hiệu ứng trái tim bay khi bấm nút
+  function showLove() {
+    for (let i = 0; i < 20; i++) {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.textContent = ["💖","💗","💞","💘","❤️"][Math.floor(Math.random()*5)];
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = 3 + Math.random() * 2 + "s";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    alert("💖 Chúc bạn luôn hạnh phúc, xinh đẹp và tràn đầy yêu thương! 💖");
+  }
+</script>
+
+</body>
+</html>
